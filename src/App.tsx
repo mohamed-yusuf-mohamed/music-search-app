@@ -65,31 +65,33 @@ function App() {
   // TODO: search field placeholder style: text inside? Or a header above: or just a pulsing field?
   // TODO: search on type:
   return (
-    <main>
-      <SearchInput />
-      <DisplayResults />
-      <ScrollToBottom >
-            Scroll to see more
-      </ScrollToBottom>
-      
-
-
-    </main>
+    <Container id="flex-container">
+      <Content id="content">
+        <Header id="header">
+          <SearchInput />
+        </Header>
+        <DisplayResults />
+      </Content>
+    </Container>
   );
 }
 
-const StyledApp = styled(App)`
-  width: 50%;
-  border: 3px solid green;
-  padding: 10px;
-  margin: auto;
+const Header = styled.div`
+  background-color: whitesmoke;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 10rem 5rem 2rem 5rem;
 
 `
 
-const ScrollToBottom = styled.p`
-  margin-bottom: 200px;
-  background-color: brown;
-`
+const Container = styled.main`
+display: flex; justify-content: center; flex-direction: row; background-color: grey;`
 
-export default StyledApp;
+const Content = styled.div`background-color: pink; flex: 0.5; flex-direction: column; display: flex;`
+
+
+
+
+export default App;
 

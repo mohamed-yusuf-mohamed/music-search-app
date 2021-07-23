@@ -79,6 +79,9 @@ export const test = () => async (dispatch: any, getState: any) => {
   
 }
 
+// TODO: change commit author and name on all commits
+
+// TODO: write as 'fetch' abstract away logic to api
 export const fetchData = () => async (dispatch: any, getState: any) => {
     const state = getState()
     const {parsedInput, fetchCount, data} = state

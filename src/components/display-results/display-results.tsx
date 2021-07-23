@@ -28,10 +28,14 @@ const DisplayContent = () => {
 
   // TODO: types
 
-  return <>{Object.values(results).map(({kind, trackName, artistName, artworkUrl60}: any) => {
+  return <Container id="display-results-container"><Content id="display-results-content">{Object.values(results).map(({kind, trackName, artistName, artworkUrl60}: any) => {
     return (
-      <StyledBoxContainer onScroll={console.log}>
-        <ArtworkContainer>artwork</ArtworkContainer>
+      <Row >
+        <ArtworkContainer>
+          <ArtworkStub>
+            ARTWORK
+          </ArtworkStub>
+        </ArtworkContainer>
         <DetailsContainer>
           <DetailsBox>
             <TrackName>
@@ -43,29 +47,56 @@ const DisplayContent = () => {
           </DetailsBox>
         </DetailsContainer>
         {loading && <CircularProgress />}
-      </StyledBoxContainer>
+      </Row>
     )
-  })}</>
+  })}
+  <ScrollToBottom >
+            Scroll to see more
+      </ScrollToBottom>
+  </Content>
+  
+  </Container>
 }
 
+const ScrollToBottom = styled.div`
+  margin-bottom: 5rem;
+  background-color: white;
+  text-align: center;
+  font-size: 1.3rem;
+  padding: 2rem;
+  text-transform: uppercase;
+`
 
-
-const StyledBoxContainer = styled.div`
+const Container = styled.div`
   display: flex;
-  width: 75%;
+  justify-content: center;
+  flex-direction: column;
+  flex-direction: row;
+  flex: 1;
+`
+
+const Content = styled.div`
+  padding: 2rem 5rem 2rem 5rem;
+  flex: 1;
+  `
+
+const Row = styled.div`
+  display: flex;
   background-color: green;
 `
 
 const ArtworkContainer = styled.div`
-  flex-grow: 1; 
+  flex: 0.3; 
   background-color: purple; 
-  margin: 5px;
+  padding: 1rem;
 `
 
+const ArtworkStub = styled.div`background-color: grey;`
+
 const DetailsContainer = styled.div`
-  flex-grow: 5;
+  flex: 0.7;
   background-color: yellow;
-  margin: 5px;
+  padding: 1rem
 `
 
 

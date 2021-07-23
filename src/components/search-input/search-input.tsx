@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from '../../redux/hooks';
 import { handleInput, fetchData } from '../../redux/actions';
 import { Button, InputAdornment, TextField, CircularProgress } from "@material-ui/core"
 import {SearchRounded} from '@material-ui/icons';
+import styled from "styled-components"
 
 // TODO: @ imports
 
@@ -17,25 +18,40 @@ const SearchInput = () => {
 
   return (
     <>
-    <TextField
+    <StyledTextField
     id="search-input"
     variant="outlined"
     placeholder="Search for your favourite song, artist or album"
+    onKeyDown={(e) => {
+      // TODO: type
+      if(e.key === "Enter") {
+        return dispatch(fetchData())
+      }
+    }}
     value={input}
-    onChange={(e) => dispatch(handleInput(e))}
+    onChange={(e: any) => dispatch(handleInput(e))}
     InputProps={{
-      startAdornment: (
+      endAdornment: (
         <InputAdornment position="start">
-          <SearchRounded />
+          <SearchRounded onClick={() => dispatch(fetchData())}/>
         </InputAdornment>
-      ),
+      )
     }}
   />
-    <Button variant="contained" color="primary" onClick={() => dispatch(fetchData())}>
-        Search
-    </Button>
   </>
   )
 }
+
+// TODO: enter keydown
+
+// TODO: make icon button
+
+// TODO: align input text center
+
+const Container = styled.div``
+
+const StyledTextField = styled(TextField)`
+flex: 1;
+`
 
 export default SearchInput
