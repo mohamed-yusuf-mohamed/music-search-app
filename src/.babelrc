@@ -1,0 +1,19 @@
+{
+  "plugins": [
+    [
+      "babel-plugin-root-import",
+      {
+        "paths": [
+          {
+            "rootPathSuffix": "./src/redux",
+            "rootPathPrefix": "@redux"
+          },
+          {
+            "rootPathSuffix": "./src/components",
+            "rootPathPrefix": "@components"
+          }
+        ]
+      }
+    ]
+  ]
+}
