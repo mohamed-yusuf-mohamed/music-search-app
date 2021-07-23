@@ -1,7 +1,7 @@
 import React, { useState, useCallback } from 'react';
 import { useSelector, useDispatch } from '../../redux/hooks';
 // import { handleInput } from './search-bar/actions';
-import { fetchData, handleInput, test } from '../../redux/actions';
+import { fetchData} from '../../redux/actions';
 import { shallowEqual } from 'react-redux'
 import { Button, InputAdornment, TextField, CircularProgress } from "@material-ui/core"
 import {SearchRounded} from '@material-ui/icons';
@@ -11,51 +11,52 @@ import styled from "styled-components"
 import debounce from "lodash/debounce"
 import isEqual from "lodash/isEqual"
 
+import {Data} from "../../redux/reducer"
+
 const DisplayContent = () => {
   const results = useSelector(state => state.data)
   const loading = useSelector(state => state.loading)
-  // TODO:
-  // mobile-ready: artworkUrl30: optimize artwork loading: mobile-ready
+  // TODO: mobile-ready: artworkUrl30: optimize artwork loading: mobile-ready
 
+  // TODO:
   function onClick() {
     // take them to collectionView
   }
-
-  // TODO: mobile-ready
-
-
   
 
   // TODO: types
 
-  return <Container id="display-results-container"><Content id="display-results-content">{Object.values(results).map(({kind, trackName, artistName, artworkUrl60}: any) => {
-    return (
-      <Row >
-        <ArtworkContainer>
-          <ArtworkStub>
-            ARTWORK
-          </ArtworkStub>
-        </ArtworkContainer>
-        <DetailsContainer>
-          <DetailsBox>
-            <TrackName>
-              {trackName}
-            </TrackName>
-            <TypeAndName>
-              {`${kind} : ${artistName}`}
-            </TypeAndName>
-          </DetailsBox>
-        </DetailsContainer>
-        {loading && <CircularProgress />}
-      </Row>
-    )
-  })}
-  <ScrollToBottom >
+  return (
+    <Container id="display-results-container">
+      <Content id="display-results-content">
+        {Object.values(results).map(({kind, trackName, artistName, artworkUrl60}: Data) => {
+          return (
+            <Row >
+              <ArtworkContainer>
+                <ArtworkStub>
+                  ARTWORK
+                </ArtworkStub>
+              </ArtworkContainer>
+              <DetailsContainer>
+                <DetailsBox>
+                  <TrackName>
+                    {trackName}
+                  </TrackName>
+                  <TypeAndName>
+                    {`${kind} : ${artistName}`}
+                  </TypeAndName>
+                </DetailsBox>
+              </DetailsContainer>
+              {loading && <CircularProgress />}
+            </Row>
+          )
+        })}
+        <ScrollToBottom >
             Scroll to see more
-      </ScrollToBottom>
-  </Content>
-  
-  </Container>
+        </ScrollToBottom>
+      </Content>
+    </Container>
+  )
 }
 
 const ScrollToBottom = styled.div`

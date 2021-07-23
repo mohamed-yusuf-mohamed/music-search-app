@@ -50,7 +50,6 @@
   },
   "devDependencies": {
     "@types/styled-components": "^5.1.11",
-    "babel-plugin-root-import": "^6.6.0",
-    "faker": "^5.5.3"
+    "babel-plugin-root-import": "^6.6.0"
   }
 }

@@ -1,7 +1,7 @@
 import React, { useState, useCallback } from 'react';
 import { useSelector, useDispatch } from './redux/hooks';
 // import { handleInput } from './search-bar/actions';
-import { fetchData, handleInput, test } from './redux/actions';
+import { fetchData } from './redux/actions';
 import { shallowEqual } from 'react-redux'
 import SearchInput from "./components/search-input"
 import { Button, InputAdornment, TextField, CircularProgress } from "@material-ui/core"
@@ -18,29 +18,16 @@ import DisplayResults from './components/display-results/display-results';
 
 function App() {
   const dispatch = useDispatch();
-  // TODO: should be able to pull in as below, using shallowEqual: validate with docs
-  const {loading, error, parsedInput, input, data, fetchCount} = useSelector((state) => state, shallowEqual)
-  // const data = useSelector((state) => state.app.data, shallowEqual)
-  // const input = useSelector((state) => state.app.input)
-  // const parsedInput = useSelector((state) => state.app.parsedInput)
-  // const loading = useSelector((state) => state.app.loading)
-
-    // TODO: use ignite eslint
+  // TODO: use ignite eslint
   // track line legnth
-
-  // TODO: entries type
-
-      // TODO: maybe use page? rather than fetch count:
   
-
   const trackScrolling = useCallback((e) => {
     // TODO: refactor
-    const isBottom = Math.round($(window).scrollTop() || 0) + Math.round($(window).height() || 0) === Math.round($(document).height() || 0)
-    if (isBottom) {
+    const bottom = Math.round($(window).scrollTop() || 0) + Math.round($(window).height() || 0) === Math.round($(document).height() || 0)
+    if (bottom) {
       return dispatch(fetchData())
     }
   }, [dispatch]);
-// TODO: refactor
   const debTrackScrolling = debounce(trackScrolling, 500)
 
   React.useEffect(() => {
@@ -50,20 +37,6 @@ function App() {
     }
   }, [debTrackScrolling])
 
-
-  // TODO: semantic css? <header>
-  function caching(){}
-
-  function onType(){}
-
-  // TODO: preform search on keydown
-
-  function onEnterKeydown() {
-
-  }
-
-  // TODO: search field placeholder style: text inside? Or a header above: or just a pulsing field?
-  // TODO: search on type:
   return (
     <Container id="flex-container">
       <Content id="content">
@@ -86,12 +59,18 @@ const Header = styled.div`
 `
 
 const Container = styled.main`
-display: flex; justify-content: center; flex-direction: row; background-color: grey;`
+  display: flex; 
+  justify-content: center; 
+  flex-direction: row; 
+  background-color: grey;
+`
 
-const Content = styled.div`background-color: pink; flex: 0.5; flex-direction: column; display: flex;`
-
-
-
+const Content = styled.div`
+  background-color: pink; 
+  flex: 0.5; 
+  flex-direction: column; 
+  display: flex;
+`
 
 export default App;
 

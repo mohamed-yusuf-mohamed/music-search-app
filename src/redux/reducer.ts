@@ -1,70 +1,52 @@
-// import { combineReducers } from 'redux'
-import {ResponseData} from "./types"
+export interface Data {
+  artistName: string,
+  kind: string,
+  trackName: string, 
+  artworkUrl60: string   
+}
 
-// COUNTER REDUCER
-// const counterReducer = (state = 0, { type }) => {
-//   switch (type) {
-//     case types.INCREMENT:
-//       return state + 1
-//     case types.DECREMENT:
-//       return state - 1
-//     case types.RESET:
-//       return 0
-//     default:
-//       return state
-//   }
-// }
+interface State {
+  loading: boolean,
+  error: boolean,
+  parsedInput: string,
+  input: string,
+  data: Record<number, Data>,
+  page: number
+}
 
-// INITIAL TIMER STATE
 const initialState = {
     loading: false,
     parsedInput: "",
     input: "",
-    data: [] as ResponseData[],
-    fetchCount: 0,
+    data: {},
+    page: 0,
     error: false
 }
 
-// TIMER REDUCER
 // TODO: types
 // TODO: refactor
-const reducer = (state = initialState, action: any) => {
-  // ...state.data
-  // ...action.payload.data
-  // action.payload.data
-  
+const reducer = (state: State = initialState, action: any) => {  
   switch (action.type) {
-
-    
-    case "FETCH_STARTED":
+    case "LOAD":
       return {
         ...state,
         loading: true
-        // fetchCount: state.fetchCount + 1
       }
-    case "TEST":
-      return {
-        ...state,
-        fetchCount: state.fetchCount + 1,
-        data: action.payload.data
-        // fetchCount: state.fetchCount + 1
-      }
-    case "FETCH_SUCCESS":
+    case "FETCH":
       return {
         ...state,
         data: action.payload.data,
-        // fetched: action.payload.data,
         loading: false,
-        fetchCount: state.fetchCount + 1
+        page: state.page + 1
       }
-    case "FETCH_ERROR":
+    case "ERROR":
       return {
         ...state,
         error: true,
         loading: false,
-        fetchCount: state.fetchCount - 1
+        page: state.page - 1
       }
-    case "CHANGE_INPUT":
+    case "INPUT":
       return {
         ...state,
         input: action.payload,
@@ -75,12 +57,4 @@ const reducer = (state = initialState, action: any) => {
   }
 }
 
-// COMBINED REDUCERS
-// const reducers = {
-//   counter: counterReducer,
-//   timer: timerReducer,
-// }
-
 export default reducer
-
-// export default combineReducers(reducers)

@@ -14,8 +14,6 @@ const SearchInput = () => {
   const input = useSelector((state) => state.input)
   const dispatch = useDispatch();
 
-  // TODO: the search button thing: to make it, onType shows results, remove search button
-
   return (
     <>
     <StyledTextField
@@ -41,8 +39,6 @@ const SearchInput = () => {
   </>
   )
 }
-
-// TODO: enter keydown
 
 // TODO: make icon button
 
