@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, ReactElement, Component } from 'react';
 import { useSelector, useDispatch } from '../../redux/hooks';
 // import { handleInput } from './search-bar/actions';
 import { fetchData} from '../../redux/actions';
@@ -22,14 +22,11 @@ const DisplayContent = () => {
   function onClick() {
     // take them to collectionView
   }
-  
-
-  // TODO: types
 
   return (
     <Container id="display-results-container">
       <Content id="display-results-content">
-        {Object.values(results).map(({kind, trackName, artistName, artworkUrl60}: Data) => {
+        {Object.values<Data>(results).map(({kind, trackName, artistName, artworkUrl60}: Data) => {
           return (
             <Row >
               <ArtworkContainer>
@@ -51,15 +48,15 @@ const DisplayContent = () => {
             </Row>
           )
         })}
-        <ScrollToBottom >
+        <ScrollMessage >
             Scroll to see more
-        </ScrollToBottom>
+        </ScrollMessage>
       </Content>
     </Container>
   )
 }
 
-const ScrollToBottom = styled.div`
+const ScrollMessage = styled.div`
   margin-bottom: 5rem;
   background-color: white;
   text-align: center;

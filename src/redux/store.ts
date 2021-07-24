@@ -1,32 +1,18 @@
-import { configureStore, ThunkAction, Action, applyMiddleware } from '@reduxjs/toolkit';
-import { combineReducers } from 'redux'
-// import counterReducer from '../../DELETEME/counter/counterSlice';
+import {ThunkAction, AnyAction, applyMiddleware, ThunkDispatch as _ThunkDispatch } from '@reduxjs/toolkit';
 import reducer from "./reducer"
 import thunk from "redux-thunk"
 import { createStore } from 'redux';
 
-// const reducer = combineReducers({counterReducer, appReducer})
-// import rootReducer from './reducers/index';
-
-// Note: this API requires redux@>=3.1.0
-// export const store = createStore(reducer, applyMiddleware(thunk));
-
 export const store = createStore(reducer, applyMiddleware(thunk))
 
-// export const store = configureStore({
-//   reducer: {
-//     counter: counterReducer,
-//     app: appReducer
-//   }
-// });
-
-// export const 
-
-export type AppDispatch = typeof store.dispatch;
-export type RootState = ReturnType<typeof store.getState>;
-export type AppThunk<ReturnType = void> = ThunkAction<
+export type State = ReturnType<typeof store.getState>;
+export type Dispatch = typeof store.dispatch;
+export type ThunkDispatch = _ThunkDispatch<State, void, AnyAction>;
+export type GetState = typeof store.getState;
+export type Thunk<ReturnType = Promise<AnyAction>> = ThunkAction<
   ReturnType,
-  RootState,
+  State,
   unknown,
-  Action<string>
+  AnyAction
 >;
+

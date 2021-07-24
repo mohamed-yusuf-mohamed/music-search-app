@@ -11,7 +11,7 @@ import styled from "styled-components"
 // TODO: mixture of single quotes and double quotes, stick to double quotes
 
 const SearchInput = () => {
-  const input = useSelector((state) => state.input)
+  const input = useSelector(state => state.input)
   const dispatch = useDispatch();
 
   return (
@@ -20,14 +20,13 @@ const SearchInput = () => {
     id="search-input"
     variant="outlined"
     placeholder="Search for your favourite song, artist or album"
-    onKeyDown={(e) => {
-      // TODO: type
+    onKeyDown={(e: React.KeyboardEvent<HTMLInputElement>) => {
       if(e.key === "Enter") {
         return dispatch(fetchData())
       }
     }}
     value={input}
-    onChange={(e: any) => dispatch(handleInput(e))}
+    onChange={(e: React.ChangeEvent<HTMLInputElement>) => dispatch(handleInput(e))}
     InputProps={{
       endAdornment: (
         <InputAdornment position="start">
@@ -44,10 +43,13 @@ const SearchInput = () => {
 
 // TODO: align input text center
 
-const Container = styled.div``
+// TODO: wrapping container element
+const Container = styled.div`
+  flex: 1
+`
 
 const StyledTextField = styled(TextField)`
-flex: 1;
+  flex: 1;
 `
 
 export default SearchInput

@@ -1,7 +1,10 @@
+import { AnyAction } from '@reduxjs/toolkit';
+
 export interface Data {
   artistName: string,
   kind: string,
   trackName: string, 
+  artworkUrl30: string,
   artworkUrl60: string   
 }
 
@@ -10,7 +13,7 @@ interface State {
   error: boolean,
   parsedInput: string,
   input: string,
-  data: Record<number, Data>,
+  data: Record<string, Data>,
   page: number
 }
 
@@ -23,9 +26,7 @@ const initialState = {
     error: false
 }
 
-// TODO: types
-// TODO: refactor
-const reducer = (state: State = initialState, action: any) => {  
+const reducer = (state: State = initialState, action: AnyAction): State => {
   switch (action.type) {
     case "LOAD":
       return {

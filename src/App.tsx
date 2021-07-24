@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, FC, ReactElement } from 'react';
 import { useSelector, useDispatch } from './redux/hooks';
 // import { handleInput } from './search-bar/actions';
 import { fetchData } from './redux/actions';
@@ -12,30 +12,34 @@ import styled from "styled-components"
 import debounce from "lodash/debounce"
 import isEqual from "lodash/isEqual"
 import DisplayResults from './components/display-results/display-results';
+import { configureStore, ThunkAction, Action, AnyAction, applyMiddleware } from '@reduxjs/toolkit';
+import {Thunk} from "./redux/store"
+
+
+// import React, {  } from 'react';
+
 
 
 // TODO: delaunay triangles that react to keystrokes
 
-function App() {
+const App = () => {
   const dispatch = useDispatch();
   // TODO: use ignite eslint
   // track line legnth
-  
-  const trackScrolling = useCallback((e) => {
+  const onScroll = debounce(() => {
     // TODO: refactor
     const bottom = Math.round($(window).scrollTop() || 0) + Math.round($(window).height() || 0) === Math.round($(document).height() || 0)
     if (bottom) {
       return dispatch(fetchData())
     }
-  }, [dispatch]);
-  const debTrackScrolling = debounce(trackScrolling, 500)
+  }, 500)
 
   React.useEffect(() => {
-    $(window).on("wheel", debTrackScrolling)
+    $(window).on("wheel", onScroll)
     return () => {
-      $(window).off("wheel", debTrackScrolling)
+      $(window).off("wheel", onScroll)
     }
-  }, [debTrackScrolling])
+  }, [onScroll])
 
   return (
     <Container id="flex-container">

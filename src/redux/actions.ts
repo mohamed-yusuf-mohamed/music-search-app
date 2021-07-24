@@ -1,11 +1,13 @@
 import Api from "../api"
+import {Dispatch, State, GetState, Thunk} from "./store"
+import { Action } from '@reduxjs/toolkit';
+import { AnyAction } from '@reduxjs/toolkit';
 
 // TODO: change commit author and name on all commits
 
-// TODO: types;
-
 const api = new Api()
-export const fetchData = () => async (dispatch: any, getState: any) => {
+
+export const fetchData = (): Thunk => async (dispatch: Dispatch, getState: GetState) => {
     const state = getState()
     const {parsedInput, page, data} = state
     const offset = page * 10
@@ -23,7 +25,7 @@ export const fetchData = () => async (dispatch: any, getState: any) => {
           }
         }
       })
-    } catch(error) {
+    } catch(err) {
       // TODO: error details to store
       return dispatch({
         type: "ERROR",
@@ -34,9 +36,8 @@ export const fetchData = () => async (dispatch: any, getState: any) => {
       })
     }
 }
-  
-// // TODO: types
-export const handleInput = (e: any) => ({ 
+
+export const handleInput = (e: React.ChangeEvent<HTMLInputElement>): AnyAction => ({ 
   type: "INPUT", 
   payload: e.target.value 
 })

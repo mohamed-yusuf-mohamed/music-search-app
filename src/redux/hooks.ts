@@ -1,10 +1,6 @@
 import { TypedUseSelectorHook, useDispatch as _useDispatch, useSelector as _useSelector } from 'react-redux';
-import type { RootState, AppDispatch } from './store';
+import type { State, Dispatch } from './store';
+import { ThunkDispatch } from './store';
 
-// Use throughout your app instead of plain `useDispatch` and `useSelector`
-export const useDispatch = () => _useDispatch<AppDispatch>();
-export const useSelector: TypedUseSelectorHook<RootState> = _useSelector;
-
-// export const useApi = () => {}
-
-// export const useEventListener = () => {}
+export const useDispatch = () => _useDispatch<ThunkDispatch>();
+export const useSelector: TypedUseSelectorHook<State> = _useSelector;
