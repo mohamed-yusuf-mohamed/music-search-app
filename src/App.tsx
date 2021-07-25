@@ -70,11 +70,10 @@ const Container = styled.main`
   display: flex; 
   justify-content: center; 
   flex-direction: row; 
-  background-color: grey;
+  font-family: sans-serif;
 `
 
 const Content = styled.div`
-  background-color: pink; 
   flex: 0.5; 
   flex-direction: column; 
   display: flex;

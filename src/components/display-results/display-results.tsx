@@ -16,34 +16,25 @@ import {Data} from "../../redux/reducer"
 import LinearProgress from '@material-ui/core/LinearProgress';
 
 const ScrollMessage = () => {
-
   const Content = styled.div`
-  margin-bottom: 5rem;
-  background-color: white;
-  text-align: center;
-  font-size: 1.3rem;
-  padding: 2rem;
-  text-transform: uppercase;
-`
-return (
-  <Content>
-    Scroll to see more
-  </Content>
-)
-
+    margin-bottom: 5rem;
+    background-color: white;
+    text-align: center;
+    font-size: 1.3rem;
+    padding: 2rem;
+    text-transform: uppercase;
+  `
+  return (
+      <Content>
+        Scroll to see more
+      </Content>
+    )
 }
 
 const DisplayContent = () => {
   const results = useSelector(state => state.data)
   const loading = useSelector(state => state.loading)
   const data = useSelector(state => state.data)
-  // TODO: mobile-ready: artworkUrl30: optimize artwork loading: mobile-ready
-
-  // TODO:
-  function onClick() {
-    // take them to collectionView
-  }
-
 
   return (
     <Container data-testid="display-results-component">
@@ -52,18 +43,12 @@ const DisplayContent = () => {
           return (
             <Row>
               <ArtworkContainer>
-                <ArtworkStub>
-                  ARTWORK
-                </ArtworkStub>
+                <Artwork url={artworkUrl100} />
               </ArtworkContainer>
               <DetailsContainer>
                 <DetailsBox>
-                  <TrackName>
-                    {trackName}
-                  </TrackName>
-                  <TypeAndName>
-                    {`${kind} : ${artistName}`}
-                  </TypeAndName>
+                  <TrackName text={trackName} />
+                  <TypeAndName type={kind} name={artistName} />
                 </DetailsBox>
               </DetailsContainer>
             </Row>
@@ -77,6 +62,22 @@ const DisplayContent = () => {
 }
 
 
+const Artwork = ({url}: {url: string}) => {
+  return <img src={url} alt="artwork"/>
+}
+
+const _TrackName = ({text, className}: {text: string, className?: string}) => {
+  return (
+    <div className={className}>
+      {text}
+    </div>
+  )
+}
+
+const TrackName = styled(_TrackName)`
+  font-size: 2rem;
+  margin-bottom: 1rem;
+`
 
 const Container = styled.div`
   display: flex;
@@ -93,33 +94,40 @@ const Content = styled.div`
 
 const Row = styled.div`
   display: flex;
-  background-color: green;
+  &:hover {
+    background-color: whitesmoke;
+  }
 `
 
 const ArtworkContainer = styled.div`
-  flex: 0.3; 
-  background-color: purple; 
+  flex: 0.15; 
   padding: 1rem;
 `
 
-const ArtworkStub = styled.div`background-color: grey;`
-
 const DetailsContainer = styled.div`
-  flex: 0.7;
-  background-color: yellow;
-  padding: 1rem
+  flex: 0.85;
+  padding: 1rem;
 `
-
 
 const DetailsBox = styled.div`
   display: flex;
   flex-direction: column;
-  background-color: red;
+  text-align: center;
 `
 
-const TrackName = styled.div``
+const _TypeAndName = ({type, name, className}: {type: string, name: string, className?: string}) => {
+  return (
+    <div className={className}>
+      <span className="type">{type}</span> • {name}
+    </div>  
+  )
+}
 
-
-const TypeAndName = styled.div``
+const TypeAndName = styled(_TypeAndName)`
+  & .type {
+    text-transform: uppercase
+  }
+  font-size: 1.5rem;
+`
 
 export default DisplayContent
