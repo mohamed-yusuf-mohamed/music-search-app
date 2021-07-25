@@ -5,7 +5,9 @@ export interface Data {
   kind: string,
   trackName: string, 
   artworkUrl30: string,
-  artworkUrl60: string   
+  artworkUrl60: string,
+  trackId: number,
+  [key: string]: any   
 }
 
 interface State {
@@ -17,7 +19,7 @@ interface State {
   page: number
 }
 
-const initialState = {
+export const initialState = {
     loading: false,
     parsedInput: "",
     input: "",
@@ -28,10 +30,21 @@ const initialState = {
 
 const reducer = (state: State = initialState, action: AnyAction): State => {
   switch (action.type) {
+    case "INPUT":
+      return {
+        ...state,
+        input: action.payload,
+        parsedInput: action.payload.split(' ').join('+')
+      }
     case "LOAD":
       return {
         ...state,
         loading: true
+      }
+    case "RESET":
+      return {
+        ...state, 
+        data: {}
       }
     case "FETCH":
       return {
@@ -44,14 +57,7 @@ const reducer = (state: State = initialState, action: AnyAction): State => {
       return {
         ...state,
         error: true,
-        loading: false,
-        page: state.page - 1
-      }
-    case "INPUT":
-      return {
-        ...state,
-        input: action.payload,
-        parsedInput: action.payload.split(' ').join('+')
+        loading: false
       }
     default:
       return state

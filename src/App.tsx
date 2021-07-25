@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from './redux/hooks';
 import { fetchData } from './redux/actions';
 import { shallowEqual } from 'react-redux'
 import SearchInput from "./components/search-input"
+import Error from "./components/error"
 import { Button, InputAdornment, TextField, CircularProgress } from "@material-ui/core"
 import {SearchRounded} from '@material-ui/icons';
 import Box from '@material-ui/core/Box';
@@ -23,10 +24,11 @@ import {Thunk} from "./redux/store"
 // TODO: delaunay triangles that react to keystrokes
 
 const App = () => {
+  const error = useSelector(state => state.error)
   const dispatch = useDispatch();
   // TODO: use ignite eslint
   // track line legnth
-  const onScroll = debounce(() => {
+  const handleScroll = debounce(() => {
     // TODO: refactor
     const bottom = Math.round($(window).scrollTop() || 0) + Math.round($(window).height() || 0) === Math.round($(document).height() || 0)
     if (bottom) {
@@ -35,11 +37,11 @@ const App = () => {
   }, 500)
 
   React.useEffect(() => {
-    $(window).on("wheel", onScroll)
+    $(window).on("wheel", handleScroll)
     return () => {
-      $(window).off("wheel", onScroll)
+      $(window).off("wheel", handleScroll)
     }
-  }, [onScroll])
+  }, [handleScroll])
 
   return (
     <Container id="flex-container">
@@ -48,10 +50,12 @@ const App = () => {
           <SearchInput />
         </Header>
         <DisplayResults />
+        {error && <Error />}
       </Content>
     </Container>
   );
 }
+
 
 const Header = styled.div`
   background-color: whitesmoke;

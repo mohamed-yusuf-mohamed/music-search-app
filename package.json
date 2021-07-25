@@ -50,6 +50,11 @@
   },
   "devDependencies": {
     "@types/styled-components": "^5.1.11",
-    "babel-plugin-root-import": "^6.6.0"
+    "babel-plugin-root-import": "^6.6.0",
+    "jest-fetch-mock": "^3.0.3",
+    "msw": "^0.33.0"
+  },
+  "jest": {
+    "resetMocks": false
   }
 }

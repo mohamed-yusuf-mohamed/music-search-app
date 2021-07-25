@@ -10,12 +10,33 @@ import $ from "jquery"
 import styled from "styled-components"
 import debounce from "lodash/debounce"
 import isEqual from "lodash/isEqual"
+import isEmpty from "lodash/isEmpty"
 
 import {Data} from "../../redux/reducer"
+import LinearProgress from '@material-ui/core/LinearProgress';
+
+const ScrollMessage = () => {
+
+  const Content = styled.div`
+  margin-bottom: 5rem;
+  background-color: white;
+  text-align: center;
+  font-size: 1.3rem;
+  padding: 2rem;
+  text-transform: uppercase;
+`
+return (
+  <Content>
+    Scroll to see more
+  </Content>
+)
+
+}
 
 const DisplayContent = () => {
   const results = useSelector(state => state.data)
   const loading = useSelector(state => state.loading)
+  const data = useSelector(state => state.data)
   // TODO: mobile-ready: artworkUrl30: optimize artwork loading: mobile-ready
 
   // TODO:
@@ -23,12 +44,13 @@ const DisplayContent = () => {
     // take them to collectionView
   }
 
+
   return (
     <Container id="display-results-container">
       <Content id="display-results-content">
         {Object.values<Data>(results).map(({kind, trackName, artistName, artworkUrl60}: Data) => {
           return (
-            <Row >
+            <Row>
               <ArtworkContainer>
                 <ArtworkStub>
                   ARTWORK
@@ -44,26 +66,17 @@ const DisplayContent = () => {
                   </TypeAndName>
                 </DetailsBox>
               </DetailsContainer>
-              {loading && <CircularProgress />}
             </Row>
           )
         })}
-        <ScrollMessage >
-            Scroll to see more
-        </ScrollMessage>
+        {loading && <LinearProgress />}
+        {!isEmpty(data) && <ScrollMessage />}
       </Content>
     </Container>
   )
 }
 
-const ScrollMessage = styled.div`
-  margin-bottom: 5rem;
-  background-color: white;
-  text-align: center;
-  font-size: 1.3rem;
-  padding: 2rem;
-  text-transform: uppercase;
-`
+
 
 const Container = styled.div`
   display: flex;

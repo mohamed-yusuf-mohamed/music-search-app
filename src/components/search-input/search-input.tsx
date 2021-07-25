@@ -1,10 +1,11 @@
 import PropTypes from "prop-types"
 import React from "react"
 import { useSelector, useDispatch } from '../../redux/hooks';
-import { handleInput, fetchData } from '../../redux/actions';
-import { Button, InputAdornment, TextField, CircularProgress } from "@material-ui/core"
+import { handleInput, fetchData, newSearch } from '../../redux/actions';
+import { Button, InputAdornment, TextField } from "@material-ui/core"
 import {SearchRounded} from '@material-ui/icons';
 import styled from "styled-components"
+import isEmpty from "lodash/isEmpty"
 
 // TODO: @ imports
 
@@ -12,7 +13,22 @@ import styled from "styled-components"
 
 const SearchInput = () => {
   const input = useSelector(state => state.input)
+  const data = useSelector(state => state.data)
   const dispatch = useDispatch();
+
+  const dataLoaded = !isEmpty(data)
+
+  const handleKeyDown = useCallback(
+    (e: React.KeyboardEvent<HTMLInputElement>) => {
+      if(e.key === "Enter") {
+        if (dataLoaded) {
+          return dispatch(newSearch())
+        }
+        return dispatch(fetchData())
+      }
+    },
+    [dispatch, dataLoaded],
+  )
 
   return (
     <>
@@ -20,11 +36,7 @@ const SearchInput = () => {
     id="search-input"
     variant="outlined"
     placeholder="Search for your favourite song, artist or album"
-    onKeyDown={(e: React.KeyboardEvent<HTMLInputElement>) => {
-      if(e.key === "Enter") {
-        return dispatch(fetchData())
-      }
-    }}
+    onKeyDown={handleKeyDown}
     value={input}
     onChange={(e: React.ChangeEvent<HTMLInputElement>) => dispatch(handleInput(e))}
     InputProps={{
