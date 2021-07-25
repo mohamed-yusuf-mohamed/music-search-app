@@ -4,10 +4,9 @@ export interface Data {
   artistName: string,
   kind: string,
   trackName: string, 
-  artworkUrl30: string,
-  artworkUrl60: string,
+  artworkUrl100: string,
   trackId: number,
-  [key: string]: any   
+  [key: string]: string | number   
 }
 
 interface State {

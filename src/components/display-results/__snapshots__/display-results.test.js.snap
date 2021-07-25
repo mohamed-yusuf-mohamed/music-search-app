@@ -1,0 +1,329 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`display results  renders 1`] = `
+<div
+  class="sc-bdnxRM kmKBKg"
+  data-testid="display-results-component"
+>
+  <div
+    class="sc-gtsrHT jJmHrj"
+    id="display-results-content"
+  >
+    <div
+      class="sc-dlnjwi cztOVI"
+    >
+      <div
+        class="sc-hKFxyN jepVTX"
+      >
+        <div
+          class="sc-eCApnc hipvbo"
+        >
+          ARTWORK
+        </div>
+      </div>
+      <div
+        class="sc-jSFjdj gyA-DLT"
+      >
+        <div
+          class="sc-gKAaRy wCVaH"
+        >
+          <div
+            class="sc-iCoGMd"
+          >
+            Don't Stop Believin'
+          </div>
+          <div
+            class="sc-fujyAs"
+          >
+            song : Journey
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="sc-dlnjwi cztOVI"
+    >
+      <div
+        class="sc-hKFxyN jepVTX"
+      >
+        <div
+          class="sc-eCApnc hipvbo"
+        >
+          ARTWORK
+        </div>
+      </div>
+      <div
+        class="sc-jSFjdj gyA-DLT"
+      >
+        <div
+          class="sc-gKAaRy wCVaH"
+        >
+          <div
+            class="sc-iCoGMd"
+          >
+            Austin Powers: The Spy Who Shagged Me
+          </div>
+          <div
+            class="sc-fujyAs"
+          >
+            feature-movie : Jay Roach
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="sc-dlnjwi cztOVI"
+    >
+      <div
+        class="sc-hKFxyN jepVTX"
+      >
+        <div
+          class="sc-eCApnc hipvbo"
+        >
+          ARTWORK
+        </div>
+      </div>
+      <div
+        class="sc-jSFjdj gyA-DLT"
+      >
+        <div
+          class="sc-gKAaRy wCVaH"
+        >
+          <div
+            class="sc-iCoGMd"
+          >
+            Love Sex Magic (feat. Justin Timberlake)
+          </div>
+          <div
+            class="sc-fujyAs"
+          >
+            song : Ciara
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="sc-dlnjwi cztOVI"
+    >
+      <div
+        class="sc-hKFxyN jepVTX"
+      >
+        <div
+          class="sc-eCApnc hipvbo"
+        >
+          ARTWORK
+        </div>
+      </div>
+      <div
+        class="sc-jSFjdj gyA-DLT"
+      >
+        <div
+          class="sc-gKAaRy wCVaH"
+        >
+          <div
+            class="sc-iCoGMd"
+          >
+            Winner (feat. Justin Timberlake & T.I.)
+          </div>
+          <div
+            class="sc-fujyAs"
+          >
+            song : Jamie Foxx
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="sc-dlnjwi cztOVI"
+    >
+      <div
+        class="sc-hKFxyN jepVTX"
+      >
+        <div
+          class="sc-eCApnc hipvbo"
+        >
+          ARTWORK
+        </div>
+      </div>
+      <div
+        class="sc-jSFjdj gyA-DLT"
+      >
+        <div
+          class="sc-gKAaRy wCVaH"
+        >
+          <div
+            class="sc-iCoGMd"
+          >
+            Winner (feat. Justin Timberlake & T.I.)
+          </div>
+          <div
+            class="sc-fujyAs"
+          >
+            song : Jamie Foxx
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="sc-dlnjwi cztOVI"
+    >
+      <div
+        class="sc-hKFxyN jepVTX"
+      >
+        <div
+          class="sc-eCApnc hipvbo"
+        >
+          ARTWORK
+        </div>
+      </div>
+      <div
+        class="sc-jSFjdj gyA-DLT"
+      >
+        <div
+          class="sc-gKAaRy wCVaH"
+        >
+          <div
+            class="sc-iCoGMd"
+          >
+            Austin Powers In Goldmember
+          </div>
+          <div
+            class="sc-fujyAs"
+          >
+            feature-movie : Jay Roach
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="sc-dlnjwi cztOVI"
+    >
+      <div
+        class="sc-hKFxyN jepVTX"
+      >
+        <div
+          class="sc-eCApnc hipvbo"
+        >
+          ARTWORK
+        </div>
+      </div>
+      <div
+        class="sc-jSFjdj gyA-DLT"
+      >
+        <div
+          class="sc-gKAaRy wCVaH"
+        >
+          <div
+            class="sc-iCoGMd"
+          >
+            Justin
+          </div>
+          <div
+            class="sc-fujyAs"
+          >
+            song : Korn
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="sc-dlnjwi cztOVI"
+    >
+      <div
+        class="sc-hKFxyN jepVTX"
+      >
+        <div
+          class="sc-eCApnc hipvbo"
+        >
+          ARTWORK
+        </div>
+      </div>
+      <div
+        class="sc-jSFjdj gyA-DLT"
+      >
+        <div
+          class="sc-gKAaRy wCVaH"
+        >
+          <div
+            class="sc-iCoGMd"
+          >
+            Holy Grail (feat. Justin Timberlake)
+          </div>
+          <div
+            class="sc-fujyAs"
+          >
+            song : JAY-Z
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="sc-dlnjwi cztOVI"
+    >
+      <div
+        class="sc-hKFxyN jepVTX"
+      >
+        <div
+          class="sc-eCApnc hipvbo"
+        >
+          ARTWORK
+        </div>
+      </div>
+      <div
+        class="sc-jSFjdj gyA-DLT"
+      >
+        <div
+          class="sc-gKAaRy wCVaH"
+        >
+          <div
+            class="sc-iCoGMd"
+          >
+            Carry Out (feat. Justin Timberlake)
+          </div>
+          <div
+            class="sc-fujyAs"
+          >
+            song : Timbaland
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="sc-dlnjwi cztOVI"
+    >
+      <div
+        class="sc-hKFxyN jepVTX"
+      >
+        <div
+          class="sc-eCApnc hipvbo"
+        >
+          ARTWORK
+        </div>
+      </div>
+      <div
+        class="sc-jSFjdj gyA-DLT"
+      >
+        <div
+          class="sc-gKAaRy wCVaH"
+        >
+          <div
+            class="sc-iCoGMd"
+          >
+            Despacito (feat. Justin Bieber)
+          </div>
+          <div
+            class="sc-fujyAs"
+          >
+            song : Luis Fonsi & Daddy Yankee
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="sc-pNWdM hSpYqw"
+    >
+      Scroll to see more
+    </div>
+  </div>
+</div>
+`;

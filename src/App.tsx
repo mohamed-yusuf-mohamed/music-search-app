@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from './redux/hooks';
 // import { handleInput } from './search-bar/actions';
 import { fetchData } from './redux/actions';
 import { shallowEqual } from 'react-redux'
-import SearchInput from "./components/search-input"
+import SearchInput from "./components/search"
 import Error from "./components/error"
 import { Button, InputAdornment, TextField, CircularProgress } from "@material-ui/core"
 import {SearchRounded} from '@material-ui/icons';
@@ -44,9 +44,9 @@ const App = () => {
   }, [handleScroll])
 
   return (
-    <Container id="flex-container">
-      <Content id="content">
-        <Header id="header">
+    <Container data-testid="app-container">
+      <Content id="app-content">
+        <Header id="app-header">
           <SearchInput />
         </Header>
         <DisplayResults />

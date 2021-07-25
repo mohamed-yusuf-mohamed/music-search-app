@@ -1,0 +1,200 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`app renders 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <main
+        class="sc-iqAclL dFOpGW"
+        data-testid="app-container"
+      >
+        <div
+          class="sc-crzoAE eQQNpY"
+          id="app-content"
+        >
+          <div
+            class="sc-kEqXSa bYPdLh"
+            id="app-header"
+          >
+            <div
+              class="MuiFormControl-root MuiTextField-root sc-gtsrHT gePIXd"
+            >
+              <div
+                class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl MuiInputBase-adornedEnd MuiOutlinedInput-adornedEnd"
+              >
+                <input
+                  aria-invalid="false"
+                  class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedEnd MuiOutlinedInput-inputAdornedEnd"
+                  id="search-input"
+                  placeholder="Search for your favourite song, artist or album"
+                  type="text"
+                  value=""
+                />
+                <div
+                  class="MuiInputAdornment-root MuiInputAdornment-positionStart"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M15.5 14h-.79l-.28-.27c1.2-1.4 1.82-3.31 1.48-5.34-.47-2.78-2.79-5-5.59-5.34-4.23-.52-7.79 3.04-7.27 7.27.34 2.8 2.56 5.12 5.34 5.59 2.03.34 3.94-.28 5.34-1.48l.27.28v.79l4.25 4.25c.41.41 1.08.41 1.49 0 .41-.41.41-1.08 0-1.49L15.5 14zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
+                    />
+                  </svg>
+                </div>
+                <fieldset
+                  aria-hidden="true"
+                  class="PrivateNotchedOutline-root-1 MuiOutlinedInput-notchedOutline"
+                  style="padding-left: 8px;"
+                >
+                  <legend
+                    class="PrivateNotchedOutline-legend-2"
+                    style="width: 0.01px;"
+                  >
+                    <span>
+                      ​
+                    </span>
+                  </legend>
+                </fieldset>
+              </div>
+            </div>
+          </div>
+          <div
+            class="sc-dlnjwi ksErfN"
+            id="display-results-container"
+          >
+            <div
+              class="sc-hKFxyN iiWwtn"
+              id="display-results-content"
+            />
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>,
+  "container": <div>
+    <main
+      class="sc-iqAclL dFOpGW"
+      data-testid="app-container"
+    >
+      <div
+        class="sc-crzoAE eQQNpY"
+        id="app-content"
+      >
+        <div
+          class="sc-kEqXSa bYPdLh"
+          id="app-header"
+        >
+          <div
+            class="MuiFormControl-root MuiTextField-root sc-gtsrHT gePIXd"
+          >
+            <div
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl MuiInputBase-adornedEnd MuiOutlinedInput-adornedEnd"
+            >
+              <input
+                aria-invalid="false"
+                class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedEnd MuiOutlinedInput-inputAdornedEnd"
+                id="search-input"
+                placeholder="Search for your favourite song, artist or album"
+                type="text"
+                value=""
+              />
+              <div
+                class="MuiInputAdornment-root MuiInputAdornment-positionStart"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M15.5 14h-.79l-.28-.27c1.2-1.4 1.82-3.31 1.48-5.34-.47-2.78-2.79-5-5.59-5.34-4.23-.52-7.79 3.04-7.27 7.27.34 2.8 2.56 5.12 5.34 5.59 2.03.34 3.94-.28 5.34-1.48l.27.28v.79l4.25 4.25c.41.41 1.08.41 1.49 0 .41-.41.41-1.08 0-1.49L15.5 14zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
+                  />
+                </svg>
+              </div>
+              <fieldset
+                aria-hidden="true"
+                class="PrivateNotchedOutline-root-1 MuiOutlinedInput-notchedOutline"
+                style="padding-left: 8px;"
+              >
+                <legend
+                  class="PrivateNotchedOutline-legend-2"
+                  style="width: 0.01px;"
+                >
+                  <span>
+                    ​
+                  </span>
+                </legend>
+              </fieldset>
+            </div>
+          </div>
+        </div>
+        <div
+          class="sc-dlnjwi ksErfN"
+          id="display-results-container"
+        >
+          <div
+            class="sc-hKFxyN iiWwtn"
+            id="display-results-content"
+          />
+        </div>
+      </div>
+    </main>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

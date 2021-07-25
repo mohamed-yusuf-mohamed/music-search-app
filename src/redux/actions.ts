@@ -45,7 +45,7 @@ export const fetchData = (): Thunk => async (dispatch: Dispatch, getState: GetSt
         }
       })
     } catch(err) {
-      // TODO: error details to store
+      // add your logger here for the error
       return dispatch({
         type: "ERROR",
         payload: {

@@ -1,5 +1,4 @@
-import PropTypes from "prop-types"
-import React from "react"
+import React, {useCallback} from "react"
 import { useSelector, useDispatch } from '../../redux/hooks';
 import { handleInput, fetchData, newSearch } from '../../redux/actions';
 import { Button, InputAdornment, TextField } from "@material-ui/core"
@@ -11,7 +10,7 @@ import isEmpty from "lodash/isEmpty"
 
 // TODO: mixture of single quotes and double quotes, stick to double quotes
 
-const SearchInput = () => {
+const Search = () => {
   const input = useSelector(state => state.input)
   const data = useSelector(state => state.data)
   const dispatch = useDispatch();
@@ -30,24 +29,32 @@ const SearchInput = () => {
     [dispatch, dataLoaded],
   )
 
+  const handleIconClick = useCallback(
+    () => dispatch(fetchData()),
+    [dispatch],
+  )
+
+  const handleChange = useCallback(
+    (e: React.ChangeEvent<HTMLInputElement>) => dispatch(handleInput(e)),
+    [dispatch],
+  )
+
   return (
-    <>
     <StyledTextField
-    id="search-input"
-    variant="outlined"
-    placeholder="Search for your favourite song, artist or album"
-    onKeyDown={handleKeyDown}
-    value={input}
-    onChange={(e: React.ChangeEvent<HTMLInputElement>) => dispatch(handleInput(e))}
-    InputProps={{
-      endAdornment: (
-        <InputAdornment position="start">
-          <SearchRounded onClick={() => dispatch(fetchData())}/>
-        </InputAdornment>
-      )
-    }}
-  />
-  </>
+      data-testid="search-component"
+      variant="outlined"
+      placeholder="Search for your favourite song, artist or album"
+      onKeyDown={handleKeyDown}
+      value={input}
+      onChange={handleChange}
+      InputProps={{
+        endAdornment: (
+          <InputAdornment position="start">
+            <SearchRounded onClick={handleIconClick}/>
+          </InputAdornment>
+        )
+      }}
+    />
   )
 }
 
@@ -56,12 +63,12 @@ const SearchInput = () => {
 // TODO: align input text center
 
 // TODO: wrapping container element
-const Container = styled.div`
-  flex: 1
-`
+// const Container = styled.div`
+//   flex: 1
+// `
 
 const StyledTextField = styled(TextField)`
   flex: 1;
 `
 
-export default SearchInput
+export default Search

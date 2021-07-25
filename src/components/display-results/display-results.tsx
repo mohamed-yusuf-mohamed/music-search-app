@@ -46,9 +46,9 @@ const DisplayContent = () => {
 
 
   return (
-    <Container id="display-results-container">
+    <Container data-testid="display-results-component">
       <Content id="display-results-content">
-        {Object.values<Data>(results).map(({kind, trackName, artistName, artworkUrl60}: Data) => {
+        {Object.values<Data>(results).map(({kind, trackName, artistName, artworkUrl100}: Data) => {
           return (
             <Row>
               <ArtworkContainer>
