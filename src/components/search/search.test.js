@@ -1,9 +1,9 @@
 import React from 'react';
-import { render, fireEvent } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import SearchInput from "./index"
-import {fetchData, handleInput} from "../../redux/actions";
+import {fetchData} from "redux/actions";
 import { Provider } from 'react-redux';
-import { store } from '../../redux/store';
+import { store } from 'redux/store';
 import userEvent from '@testing-library/user-event'
 
 jest.mock("../../redux/actions", () => ({
@@ -29,7 +29,7 @@ describe("search input component", () => {
     expect(input.value).toBe("apples oranges")
   })
 
-  it.only("on pressing enter", () => {
+  it("on pressing enter", () => {
     userEvent.type(input, "bananas grapes")
     userEvent.keyboard("{Enter}")
     expect(fetchData).toHaveBeenCalled()

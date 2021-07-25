@@ -1,10 +1,7 @@
-import Api from "../api"
+import Api from "./index"
 import fetch from "jest-fetch-mock"
 import { enableFetchMocks } from 'jest-fetch-mock'
 enableFetchMocks()
-
-
-// TODO: ensure package.json is clean, dev and client dependances are correct
 
 describe('api', () => {
   const api = new Api()

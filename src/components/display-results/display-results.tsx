@@ -1,24 +1,16 @@
-import React, { useState, useCallback, ReactElement, Component } from 'react';
-import { useSelector, useDispatch } from '../../redux/hooks';
-// import { handleInput } from './search-bar/actions';
-import { fetchData} from '../../redux/actions';
-import { shallowEqual } from 'react-redux'
-import { Button, InputAdornment, TextField, CircularProgress } from "@material-ui/core"
-import {SearchRounded} from '@material-ui/icons';
-import Box from '@material-ui/core/Box';
-import $ from "jquery"
+import React from 'react';
+import { useSelector} from 'redux/hooks';
 import styled from "styled-components"
-import debounce from "lodash/debounce"
-import isEqual from "lodash/isEqual"
 import isEmpty from "lodash/isEmpty"
-
-import {Data} from "../../redux/reducer"
+import {Data} from "redux/reducer"
 import LinearProgress from '@material-ui/core/LinearProgress';
+import MESSAGES from "constants/messages"
 
 const ScrollMessage = () => {
+  const error = useSelector(state => state.error)
   const Content = styled.div`
     margin-bottom: 5rem;
-    background-color: white;
+    background-color: whitesmoke;
     text-align: center;
     font-size: 1.3rem;
     padding: 2rem;
@@ -26,41 +18,10 @@ const ScrollMessage = () => {
   `
   return (
       <Content>
-        Scroll to see more
+        {error ? MESSAGES["error"] : MESSAGES["scroll"]}
       </Content>
     )
 }
-
-const DisplayContent = () => {
-  const results = useSelector(state => state.data)
-  const loading = useSelector(state => state.loading)
-  const data = useSelector(state => state.data)
-
-  return (
-    <Container data-testid="display-results-component">
-      <Content id="display-results-content">
-        {Object.values<Data>(results).map(({kind, trackName, artistName, artworkUrl100}: Data) => {
-          return (
-            <Row>
-              <ArtworkContainer>
-                <Artwork url={artworkUrl100} />
-              </ArtworkContainer>
-              <DetailsContainer>
-                <DetailsBox>
-                  <TrackName text={trackName} />
-                  <TypeAndName type={kind} name={artistName} />
-                </DetailsBox>
-              </DetailsContainer>
-            </Row>
-          )
-        })}
-        {loading && <LinearProgress />}
-        {!isEmpty(data) && <ScrollMessage />}
-      </Content>
-    </Container>
-  )
-}
-
 
 const Artwork = ({url}: {url: string}) => {
   return <img src={url} alt="artwork"/>
@@ -77,6 +38,21 @@ const _TrackName = ({text, className}: {text: string, className?: string}) => {
 const TrackName = styled(_TrackName)`
   font-size: 2rem;
   margin-bottom: 1rem;
+`
+
+const _TypeAndName = ({type, name, className}: {type: string, name: string, className?: string}) => {
+  return (
+    <div className={className}>
+      <span className="type">{type}</span> • {name}
+    </div>  
+  )
+}
+
+const TypeAndName = styled(_TypeAndName)`
+  & .type {
+    text-transform: uppercase
+  }
+  font-size: 1.5rem;
 `
 
 const Container = styled.div`
@@ -115,19 +91,34 @@ const DetailsBox = styled.div`
   text-align: center;
 `
 
-const _TypeAndName = ({type, name, className}: {type: string, name: string, className?: string}) => {
+const DisplayContent = () => {
+  const results = useSelector(state => state.data)
+  const loading = useSelector(state => state.loading)
+  const data = useSelector(state => state.data)
+
   return (
-    <div className={className}>
-      <span className="type">{type}</span> • {name}
-    </div>  
+    <Container data-testid="display-results-component">
+      <Content id="display-results-content">
+        {Object.values<Data>(results).map(({kind, trackName, artistName, artworkUrl100}: Data) => {
+          return (
+            <Row>
+              <ArtworkContainer>
+                <Artwork url={artworkUrl100} />
+              </ArtworkContainer>
+              <DetailsContainer>
+                <DetailsBox>
+                  <TrackName text={trackName} />
+                  <TypeAndName type={kind} name={artistName} />
+                </DetailsBox>
+              </DetailsContainer>
+            </Row>
+          )
+        })}
+        {loading && <LinearProgress />}
+        {!isEmpty(data) && !loading && <ScrollMessage />}
+      </Content>
+    </Container>
   )
 }
-
-const TypeAndName = styled(_TypeAndName)`
-  & .type {
-    text-transform: uppercase
-  }
-  font-size: 1.5rem;
-`
 
 export default DisplayContent

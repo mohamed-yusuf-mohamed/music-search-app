@@ -32,8 +32,8 @@ const reducer = (state: State = initialState, action: AnyAction): State => {
     case "INPUT":
       return {
         ...state,
-        input: action.payload,
-        parsedInput: action.payload.split(' ').join('+')
+        input: action.payload.input,
+        parsedInput: action.payload.input.split(' ').join('+')
       }
     case "LOAD":
       return {

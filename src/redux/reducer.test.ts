@@ -1,14 +1,8 @@
 import {fetchData, handleInput, reset, load} from "./actions"
-import reducer from "./reducer"
-import {api} from "../api"
 import fetch from "jest-fetch-mock"
 import {store} from "./store"
 import { enableFetchMocks } from 'jest-fetch-mock'
 enableFetchMocks()
-
-// jest.mock("./reducer", () => jest.fn())
-
-// TODO: ensure package.json is clean, dev and client dependances are correct
 
 describe('reducer', () => {
   beforeEach(async () => {
@@ -21,7 +15,7 @@ describe('reducer', () => {
       parsedInput: "",
       input: "",
       data: {},
-      page: 0, // TODO: fetchCount in place of page makes more sense
+      page: 0,
       error: false
     })
   });
@@ -33,7 +27,7 @@ describe('reducer', () => {
       parsedInput: "",
       input: "",
       data: {},
-      page: 0, // TODO: fetchCount in place of page makes more sense
+      page: 0,
       error: false
     })
   });
@@ -45,7 +39,7 @@ describe('reducer', () => {
       parsedInput: "",
       input: "",
       data: {},
-      page: 0, // TODO: fetchCount in place of page makes more sense
+      page: 0,
       error: false
     })
   });
@@ -68,7 +62,7 @@ describe('reducer', () => {
           trackName: "test"
         }
       },
-      page: 1, // TODO: fetchCount in place of page makes more sense
+      page: 1,
       error: false
     })
   });
@@ -81,7 +75,7 @@ describe('reducer', () => {
       parsedInput: "",
       input: "",
       data: {},
-      page: 0, // TODO: fetchCount in place of page makes more sense
+      page: 0,
       error: true
     })
   });
@@ -98,9 +92,8 @@ describe('reducer', () => {
       parsedInput: "apples+oranges",
       input: "apples oranges",
       data: {},
-      page: 0, // TODO: fetchCount in place of page makes more sense
+      page: 0,
       error: false
     })
-    // console.log(store.getState())
   });
 });

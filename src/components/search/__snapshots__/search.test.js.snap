@@ -2,7 +2,7 @@
 
 exports[`search input component renders 1`] = `
 <div
-  class="MuiFormControl-root MuiTextField-root sc-gtsrHT gePIXd"
+  class="MuiFormControl-root MuiTextField-root sc-bdnxRM dbawFk"
   data-testid="search-component"
 >
   <div

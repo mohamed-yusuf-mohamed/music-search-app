@@ -2,325 +2,375 @@
 
 exports[`display results  renders 1`] = `
 <div
-  class="sc-bdnxRM kmKBKg"
+  class="sc-gtsrHT iiePrd"
   data-testid="display-results-component"
 >
   <div
-    class="sc-gtsrHT jJmHrj"
+    class="sc-dlnjwi jjdLkz"
     id="display-results-content"
   >
     <div
-      class="sc-dlnjwi cztOVI"
+      class="sc-hKFxyN gChbxn"
     >
       <div
-        class="sc-hKFxyN jepVTX"
+        class="sc-eCApnc bRsgKj"
       >
-        <div
-          class="sc-eCApnc hipvbo"
-        >
-          ARTWORK
-        </div>
+        <img
+          alt="artwork"
+          src="https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/01/69/5f/01695f6c-541d-faef-ac67-d1033b11c79a/source/100x100bb.jpg"
+        />
       </div>
       <div
-        class="sc-jSFjdj gyA-DLT"
+        class="sc-jSFjdj jDAnrT"
       >
         <div
-          class="sc-gKAaRy wCVaH"
+          class="sc-gKAaRy fItTJE"
         >
           <div
-            class="sc-iCoGMd"
+            class="sc-bdnxRM lhQKbR"
           >
             Don't Stop Believin'
           </div>
           <div
-            class="sc-fujyAs"
+            class="sc-iCoGMd iVNiph"
           >
-            song : Journey
+            <span
+              class="type"
+            >
+              song
+            </span>
+             • 
+            Journey
           </div>
         </div>
       </div>
     </div>
     <div
-      class="sc-dlnjwi cztOVI"
+      class="sc-hKFxyN gChbxn"
     >
       <div
-        class="sc-hKFxyN jepVTX"
+        class="sc-eCApnc bRsgKj"
       >
-        <div
-          class="sc-eCApnc hipvbo"
-        >
-          ARTWORK
-        </div>
+        <img
+          alt="artwork"
+          src="https://is2-ssl.mzstatic.com/image/thumb/Video4/v4/10/8b/b3/108bb32b-ccb4-0f9b-b9f1-e7fde643b99b/source/100x100bb.jpg"
+        />
       </div>
       <div
-        class="sc-jSFjdj gyA-DLT"
+        class="sc-jSFjdj jDAnrT"
       >
         <div
-          class="sc-gKAaRy wCVaH"
+          class="sc-gKAaRy fItTJE"
         >
           <div
-            class="sc-iCoGMd"
+            class="sc-bdnxRM lhQKbR"
           >
             Austin Powers: The Spy Who Shagged Me
           </div>
           <div
-            class="sc-fujyAs"
+            class="sc-iCoGMd iVNiph"
           >
-            feature-movie : Jay Roach
+            <span
+              class="type"
+            >
+              feature-movie
+            </span>
+             • 
+            Jay Roach
           </div>
         </div>
       </div>
     </div>
     <div
-      class="sc-dlnjwi cztOVI"
+      class="sc-hKFxyN gChbxn"
     >
       <div
-        class="sc-hKFxyN jepVTX"
+        class="sc-eCApnc bRsgKj"
       >
-        <div
-          class="sc-eCApnc hipvbo"
-        >
-          ARTWORK
-        </div>
+        <img
+          alt="artwork"
+          src="https://is2-ssl.mzstatic.com/image/thumb/Music/v4/db/8b/2b/db8b2b57-82b7-ee53-8198-645c2c95f88a/source/100x100bb.jpg"
+        />
       </div>
       <div
-        class="sc-jSFjdj gyA-DLT"
+        class="sc-jSFjdj jDAnrT"
       >
         <div
-          class="sc-gKAaRy wCVaH"
+          class="sc-gKAaRy fItTJE"
         >
           <div
-            class="sc-iCoGMd"
+            class="sc-bdnxRM lhQKbR"
           >
             Love Sex Magic (feat. Justin Timberlake)
           </div>
           <div
-            class="sc-fujyAs"
+            class="sc-iCoGMd iVNiph"
           >
-            song : Ciara
+            <span
+              class="type"
+            >
+              song
+            </span>
+             • 
+            Ciara
           </div>
         </div>
       </div>
     </div>
     <div
-      class="sc-dlnjwi cztOVI"
+      class="sc-hKFxyN gChbxn"
     >
       <div
-        class="sc-hKFxyN jepVTX"
+        class="sc-eCApnc bRsgKj"
       >
-        <div
-          class="sc-eCApnc hipvbo"
-        >
-          ARTWORK
-        </div>
+        <img
+          alt="artwork"
+          src="https://is1-ssl.mzstatic.com/image/thumb/Music/v4/53/c0/8a/53c08a20-e18e-85a1-9364-5875b87573cd/source/100x100bb.jpg"
+        />
       </div>
       <div
-        class="sc-jSFjdj gyA-DLT"
+        class="sc-jSFjdj jDAnrT"
       >
         <div
-          class="sc-gKAaRy wCVaH"
+          class="sc-gKAaRy fItTJE"
         >
           <div
-            class="sc-iCoGMd"
+            class="sc-bdnxRM lhQKbR"
           >
             Winner (feat. Justin Timberlake & T.I.)
           </div>
           <div
-            class="sc-fujyAs"
+            class="sc-iCoGMd iVNiph"
           >
-            song : Jamie Foxx
+            <span
+              class="type"
+            >
+              song
+            </span>
+             • 
+            Jamie Foxx
           </div>
         </div>
       </div>
     </div>
     <div
-      class="sc-dlnjwi cztOVI"
+      class="sc-hKFxyN gChbxn"
     >
       <div
-        class="sc-hKFxyN jepVTX"
+        class="sc-eCApnc bRsgKj"
       >
-        <div
-          class="sc-eCApnc hipvbo"
-        >
-          ARTWORK
-        </div>
+        <img
+          alt="artwork"
+          src="https://is3-ssl.mzstatic.com/image/thumb/Music/v4/f8/70/d6/f870d6f9-0841-0052-9cd1-d89ae95ac0ad/source/100x100bb.jpg"
+        />
       </div>
       <div
-        class="sc-jSFjdj gyA-DLT"
+        class="sc-jSFjdj jDAnrT"
       >
         <div
-          class="sc-gKAaRy wCVaH"
+          class="sc-gKAaRy fItTJE"
         >
           <div
-            class="sc-iCoGMd"
+            class="sc-bdnxRM lhQKbR"
           >
             Winner (feat. Justin Timberlake & T.I.)
           </div>
           <div
-            class="sc-fujyAs"
+            class="sc-iCoGMd iVNiph"
           >
-            song : Jamie Foxx
+            <span
+              class="type"
+            >
+              song
+            </span>
+             • 
+            Jamie Foxx
           </div>
         </div>
       </div>
     </div>
     <div
-      class="sc-dlnjwi cztOVI"
+      class="sc-hKFxyN gChbxn"
     >
       <div
-        class="sc-hKFxyN jepVTX"
+        class="sc-eCApnc bRsgKj"
       >
-        <div
-          class="sc-eCApnc hipvbo"
-        >
-          ARTWORK
-        </div>
+        <img
+          alt="artwork"
+          src="https://is1-ssl.mzstatic.com/image/thumb/Video/v4/31/fe/e9/31fee9cd-f1e7-a6b2-5827-bd780c9e0b46/source/100x100bb.jpg"
+        />
       </div>
       <div
-        class="sc-jSFjdj gyA-DLT"
+        class="sc-jSFjdj jDAnrT"
       >
         <div
-          class="sc-gKAaRy wCVaH"
+          class="sc-gKAaRy fItTJE"
         >
           <div
-            class="sc-iCoGMd"
+            class="sc-bdnxRM lhQKbR"
           >
             Austin Powers In Goldmember
           </div>
           <div
-            class="sc-fujyAs"
+            class="sc-iCoGMd iVNiph"
           >
-            feature-movie : Jay Roach
+            <span
+              class="type"
+            >
+              feature-movie
+            </span>
+             • 
+            Jay Roach
           </div>
         </div>
       </div>
     </div>
     <div
-      class="sc-dlnjwi cztOVI"
+      class="sc-hKFxyN gChbxn"
     >
       <div
-        class="sc-hKFxyN jepVTX"
+        class="sc-eCApnc bRsgKj"
       >
-        <div
-          class="sc-eCApnc hipvbo"
-        >
-          ARTWORK
-        </div>
+        <img
+          alt="artwork"
+          src="https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/78/2b/8f/782b8fa1-0e66-b76d-83c9-80e6013e25f4/source/100x100bb.jpg"
+        />
       </div>
       <div
-        class="sc-jSFjdj gyA-DLT"
+        class="sc-jSFjdj jDAnrT"
       >
         <div
-          class="sc-gKAaRy wCVaH"
+          class="sc-gKAaRy fItTJE"
         >
           <div
-            class="sc-iCoGMd"
+            class="sc-bdnxRM lhQKbR"
           >
             Justin
           </div>
           <div
-            class="sc-fujyAs"
+            class="sc-iCoGMd iVNiph"
           >
-            song : Korn
+            <span
+              class="type"
+            >
+              song
+            </span>
+             • 
+            Korn
           </div>
         </div>
       </div>
     </div>
     <div
-      class="sc-dlnjwi cztOVI"
+      class="sc-hKFxyN gChbxn"
     >
       <div
-        class="sc-hKFxyN jepVTX"
+        class="sc-eCApnc bRsgKj"
       >
-        <div
-          class="sc-eCApnc hipvbo"
-        >
-          ARTWORK
-        </div>
+        <img
+          alt="artwork"
+          src="https://is3-ssl.mzstatic.com/image/thumb/Music125/v4/d6/f7/b0/d6f7b076-668e-a47a-8699-c31ea070a274/source/100x100bb.jpg"
+        />
       </div>
       <div
-        class="sc-jSFjdj gyA-DLT"
+        class="sc-jSFjdj jDAnrT"
       >
         <div
-          class="sc-gKAaRy wCVaH"
+          class="sc-gKAaRy fItTJE"
         >
           <div
-            class="sc-iCoGMd"
+            class="sc-bdnxRM lhQKbR"
           >
             Holy Grail (feat. Justin Timberlake)
           </div>
           <div
-            class="sc-fujyAs"
+            class="sc-iCoGMd iVNiph"
           >
-            song : JAY-Z
+            <span
+              class="type"
+            >
+              song
+            </span>
+             • 
+            JAY-Z
           </div>
         </div>
       </div>
     </div>
     <div
-      class="sc-dlnjwi cztOVI"
+      class="sc-hKFxyN gChbxn"
     >
       <div
-        class="sc-hKFxyN jepVTX"
+        class="sc-eCApnc bRsgKj"
       >
-        <div
-          class="sc-eCApnc hipvbo"
-        >
-          ARTWORK
-        </div>
+        <img
+          alt="artwork"
+          src="https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/57/b2/d7/57b2d7a7-3d6d-199e-872e-8527a8a86c9a/source/100x100bb.jpg"
+        />
       </div>
       <div
-        class="sc-jSFjdj gyA-DLT"
+        class="sc-jSFjdj jDAnrT"
       >
         <div
-          class="sc-gKAaRy wCVaH"
+          class="sc-gKAaRy fItTJE"
         >
           <div
-            class="sc-iCoGMd"
+            class="sc-bdnxRM lhQKbR"
           >
             Carry Out (feat. Justin Timberlake)
           </div>
           <div
-            class="sc-fujyAs"
+            class="sc-iCoGMd iVNiph"
           >
-            song : Timbaland
+            <span
+              class="type"
+            >
+              song
+            </span>
+             • 
+            Timbaland
           </div>
         </div>
       </div>
     </div>
     <div
-      class="sc-dlnjwi cztOVI"
+      class="sc-hKFxyN gChbxn"
     >
       <div
-        class="sc-hKFxyN jepVTX"
+        class="sc-eCApnc bRsgKj"
       >
-        <div
-          class="sc-eCApnc hipvbo"
-        >
-          ARTWORK
-        </div>
+        <img
+          alt="artwork"
+          src="https://is2-ssl.mzstatic.com/image/thumb/Music124/v4/32/c9/65/32c96534-a96d-e15e-9b46-cf8475751c34/source/100x100bb.jpg"
+        />
       </div>
       <div
-        class="sc-jSFjdj gyA-DLT"
+        class="sc-jSFjdj jDAnrT"
       >
         <div
-          class="sc-gKAaRy wCVaH"
+          class="sc-gKAaRy fItTJE"
         >
           <div
-            class="sc-iCoGMd"
+            class="sc-bdnxRM lhQKbR"
           >
             Despacito (feat. Justin Bieber)
           </div>
           <div
-            class="sc-fujyAs"
+            class="sc-iCoGMd iVNiph"
           >
-            song : Luis Fonsi & Daddy Yankee
+            <span
+              class="type"
+            >
+              song
+            </span>
+             • 
+            Luis Fonsi & Daddy Yankee
           </div>
         </div>
       </div>
     </div>
     <div
-      class="sc-pNWdM hSpYqw"
+      class="sc-fujyAs bDcCHq"
     >
       Scroll to see more
     </div>

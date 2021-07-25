@@ -1,14 +1,14 @@
 import React, {useCallback} from "react"
-import { useSelector, useDispatch } from '../../redux/hooks';
-import { handleInput, fetchData, newSearch } from '../../redux/actions';
-import { Button, InputAdornment, TextField } from "@material-ui/core"
+import { useSelector, useDispatch } from 'redux/hooks';
+import { handleInput, fetchData, newSearch } from 'redux/actions';
+import { InputAdornment, TextField } from "@material-ui/core"
 import {SearchRounded} from '@material-ui/icons';
 import styled from "styled-components"
 import isEmpty from "lodash/isEmpty"
 
-// TODO: @ imports
-
-// TODO: mixture of single quotes and double quotes, stick to double quotes
+const StyledTextField = styled(TextField)`
+  flex: 1;
+`
 
 const Search = () => {
   const input = useSelector(state => state.input)
@@ -57,18 +57,5 @@ const Search = () => {
     />
   )
 }
-
-// TODO: make icon button
-
-// TODO: align input text center
-
-// TODO: wrapping container element
-// const Container = styled.div`
-//   flex: 1
-// `
-
-const StyledTextField = styled(TextField)`
-  flex: 1;
-`
 
 export default Search

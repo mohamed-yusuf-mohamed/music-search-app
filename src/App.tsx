@@ -1,35 +1,36 @@
-import React, { useState, useCallback, FC, ReactElement } from 'react';
-import { useSelector, useDispatch } from './redux/hooks';
-// import { handleInput } from './search-bar/actions';
-import { fetchData } from './redux/actions';
-import { shallowEqual } from 'react-redux'
-import SearchInput from "./components/search"
-import Error from "./components/error"
-import { Button, InputAdornment, TextField, CircularProgress } from "@material-ui/core"
-import {SearchRounded} from '@material-ui/icons';
-import Box from '@material-ui/core/Box';
+import React from 'react';
+import { useDispatch } from 'redux/hooks';
+import { fetchData } from 'redux/actions';
+import SearchInput from "components/search"
 import $ from "jquery"
 import styled from "styled-components"
 import debounce from "lodash/debounce"
-import isEqual from "lodash/isEqual"
-import DisplayResults from './components/display-results/display-results';
-import { configureStore, ThunkAction, Action, AnyAction, applyMiddleware } from '@reduxjs/toolkit';
-import {Thunk} from "./redux/store"
+import DisplayResults from 'components/display-results';
 
+const Header = styled.div`
+  background-color: whitesmoke;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 10rem 5rem 2rem 5rem;
+`
 
-// import React, {  } from 'react';
+const Container = styled.main`
+  display: flex; 
+  justify-content: center; 
+  flex-direction: row; 
+  font-family: sans-serif;
+`
 
-
-
-// TODO: delaunay triangles that react to keystrokes
+const Content = styled.div`
+  flex: 0.5; 
+  flex-direction: column; 
+  display: flex;
+`
 
 const App = () => {
-  const error = useSelector(state => state.error)
   const dispatch = useDispatch();
-  // TODO: use ignite eslint
-  // track line legnth
   const handleScroll = debounce(() => {
-    // TODO: refactor
     const bottom = Math.round($(window).scrollTop() || 0) + Math.round($(window).height() || 0) === Math.round($(document).height() || 0)
     if (bottom) {
       return dispatch(fetchData())
@@ -50,34 +51,10 @@ const App = () => {
           <SearchInput />
         </Header>
         <DisplayResults />
-        {error && <Error />}
       </Content>
     </Container>
   );
 }
-
-
-const Header = styled.div`
-  background-color: whitesmoke;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  padding: 10rem 5rem 2rem 5rem;
-
-`
-
-const Container = styled.main`
-  display: flex; 
-  justify-content: center; 
-  flex-direction: row; 
-  font-family: sans-serif;
-`
-
-const Content = styled.div`
-  flex: 0.5; 
-  flex-direction: column; 
-  display: flex;
-`
 
 export default App;
 

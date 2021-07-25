@@ -5,13 +5,14 @@ import { store } from './redux/store';
 import App from './app';
 
 describe("app", () => {
-  it.only('renders', () => {
-    const app = render(
-      <Provider store={store}>
-        <App />
-      </Provider>
-    );
-  
+  const {getByTestId} = render(
+    <Provider store={store}>
+      <App />
+    </Provider>
+  );
+
+  const app = getByTestId("app-container")
+  it('renders', () => {
     expect(app).toMatchSnapshot()
   });
 })

@@ -1,5 +1,4 @@
-import {Data} from "../redux/reducer"
-
+import {Data} from "redux/reducer"
 class Api {
   async fetch(url = ""): Promise<Record<string, Data>> {
     try {
