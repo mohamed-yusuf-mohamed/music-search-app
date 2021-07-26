@@ -11,7 +11,7 @@ enableFetchMocks()
 
 describe("display results ", () => {
   beforeAll(async () => {
-    // preload store with "justin" search data
+    // preload store with "justin bieber" search data
     fetch.mockResponseOnce(() => Promise.resolve(JSON.stringify(mock)))
     await store.dispatch(fetchData())
   })

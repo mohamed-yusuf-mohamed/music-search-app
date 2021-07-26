@@ -6,20 +6,21 @@ import {Data} from "redux/reducer"
 import LinearProgress from '@material-ui/core/LinearProgress';
 import MESSAGES from "constants/messages"
 
+const Message = styled.div`
+  margin-bottom: 5rem;
+  background-color: whitesmoke;
+  text-align: center;
+  font-size: 1.3rem;
+  padding: 2rem;
+  text-transform: uppercase;
+`
+
 const ScrollMessage = () => {
   const error = useSelector(state => state.error)
-  const Content = styled.div`
-    margin-bottom: 5rem;
-    background-color: whitesmoke;
-    text-align: center;
-    font-size: 1.3rem;
-    padding: 2rem;
-    text-transform: uppercase;
-  `
   return (
-      <Content>
+      <Message>
         {error ? MESSAGES["error"] : MESSAGES["scroll"]}
-      </Content>
+      </Message>
     )
 }
 
@@ -99,9 +100,9 @@ const DisplayContent = () => {
   return (
     <Container data-testid="display-results-component">
       <Content id="display-results-content">
-        {Object.values<Data>(results).map(({kind, trackName, artistName, artworkUrl100}: Data) => {
+        {Object.values<Data>(results).map(({kind, trackName, artistName, artworkUrl100, trackId}: Data) => {
           return (
-            <Row>
+            <Row key={trackId}>
               <ArtworkContainer>
                 <Artwork url={artworkUrl100} />
               </ArtworkContainer>

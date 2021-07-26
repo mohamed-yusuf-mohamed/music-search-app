@@ -2,37 +2,37 @@
 
 exports[`display results  renders 1`] = `
 <div
-  class="sc-gtsrHT iiePrd"
+  class="KrDJx"
   data-testid="display-results-component"
 >
   <div
-    class="sc-dlnjwi jjdLkz"
+    class="dPuwOz"
     id="display-results-content"
   >
     <div
-      class="sc-hKFxyN gChbxn"
+      class="mLgqy"
     >
       <div
-        class="sc-eCApnc bRsgKj"
+        class="cPcMti"
       >
         <img
           alt="artwork"
-          src="https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/01/69/5f/01695f6c-541d-faef-ac67-d1033b11c79a/source/100x100bb.jpg"
+          src="https://is4-ssl.mzstatic.com/image/thumb/Music114/v4/e0/37/00/e037007b-186e-f0a0-99dd-26103896cc09/source/100x100bb.jpg"
         />
       </div>
       <div
-        class="sc-jSFjdj jDAnrT"
+        class="jwMMBf"
       >
         <div
-          class="sc-gKAaRy fItTJE"
+          class="fpdapt"
         >
           <div
-            class="sc-bdnxRM lhQKbR"
+            class="hTZTrA"
           >
-            Don't Stop Believin'
+            Justin Bieber (feat. Elz Jenkins)
           </div>
           <div
-            class="sc-iCoGMd iVNiph"
+            class="jmqOqk"
           >
             <span
               class="type"
@@ -40,35 +40,35 @@ exports[`display results  renders 1`] = `
               song
             </span>
              • 
-            Journey
+            Jarren Benton
           </div>
         </div>
       </div>
     </div>
     <div
-      class="sc-hKFxyN gChbxn"
+      class="mLgqy"
     >
       <div
-        class="sc-eCApnc bRsgKj"
+        class="cPcMti"
       >
         <img
           alt="artwork"
-          src="https://is2-ssl.mzstatic.com/image/thumb/Video4/v4/10/8b/b3/108bb32b-ccb4-0f9b-b9f1-e7fde643b99b/source/100x100bb.jpg"
+          src="https://is4-ssl.mzstatic.com/image/thumb/Video/v4/e0/4e/6c/e04e6c61-6fed-c5a8-e3f9-9e71b5dfb735/source/100x100bb.jpg"
         />
       </div>
       <div
-        class="sc-jSFjdj jDAnrT"
+        class="jwMMBf"
       >
         <div
-          class="sc-gKAaRy fItTJE"
+          class="fpdapt"
         >
           <div
-            class="sc-bdnxRM lhQKbR"
+            class="hTZTrA"
           >
-            Austin Powers: The Spy Who Shagged Me
+            Justin Bieber: Never Say Never
           </div>
           <div
-            class="sc-iCoGMd iVNiph"
+            class="jmqOqk"
           >
             <span
               class="type"
@@ -76,35 +76,71 @@ exports[`display results  renders 1`] = `
               feature-movie
             </span>
              • 
-            Jay Roach
+            Jon M. Chu
           </div>
         </div>
       </div>
     </div>
     <div
-      class="sc-hKFxyN gChbxn"
+      class="mLgqy"
     >
       <div
-        class="sc-eCApnc bRsgKj"
+        class="cPcMti"
       >
         <img
           alt="artwork"
-          src="https://is2-ssl.mzstatic.com/image/thumb/Music/v4/db/8b/2b/db8b2b57-82b7-ee53-8198-645c2c95f88a/source/100x100bb.jpg"
+          src="https://is1-ssl.mzstatic.com/image/thumb/Music6/v4/e8/6f/a6/e86fa691-61d4-2f64-18e4-7d75486a9574/source/100x100bb.jpg"
         />
       </div>
       <div
-        class="sc-jSFjdj jDAnrT"
+        class="jwMMBf"
       >
         <div
-          class="sc-gKAaRy fItTJE"
+          class="fpdapt"
         >
           <div
-            class="sc-bdnxRM lhQKbR"
+            class="hTZTrA"
           >
-            Love Sex Magic (feat. Justin Timberlake)
+            Justin Bieber
           </div>
           <div
-            class="sc-iCoGMd iVNiph"
+            class="jmqOqk"
+          >
+            <span
+              class="type"
+            >
+              tv-episode
+            </span>
+             • 
+            Ridiculousness
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="mLgqy"
+    >
+      <div
+        class="cPcMti"
+      >
+        <img
+          alt="artwork"
+          src="https://is1-ssl.mzstatic.com/image/thumb/Music/v4/f5/13/25/f51325e9-492f-07ce-a512-786228fac99c/source/100x100bb.jpg"
+        />
+      </div>
+      <div
+        class="jwMMBf"
+      >
+        <div
+          class="fpdapt"
+        >
+          <div
+            class="hTZTrA"
+          >
+            Justin Bieber
+          </div>
+          <div
+            class="jmqOqk"
           >
             <span
               class="type"
@@ -112,35 +148,35 @@ exports[`display results  renders 1`] = `
               song
             </span>
              • 
-            Ciara
+            Smash Mouth
           </div>
         </div>
       </div>
     </div>
     <div
-      class="sc-hKFxyN gChbxn"
+      class="mLgqy"
     >
       <div
-        class="sc-eCApnc bRsgKj"
+        class="cPcMti"
       >
         <img
           alt="artwork"
-          src="https://is1-ssl.mzstatic.com/image/thumb/Music/v4/53/c0/8a/53c08a20-e18e-85a1-9364-5875b87573cd/source/100x100bb.jpg"
+          src="https://is5-ssl.mzstatic.com/image/thumb/Music115/v4/52/1e/d3/521ed3e0-f305-9629-2d74-00ad58dde6c2/source/100x100bb.jpg"
         />
       </div>
       <div
-        class="sc-jSFjdj jDAnrT"
+        class="jwMMBf"
       >
         <div
-          class="sc-gKAaRy fItTJE"
+          class="fpdapt"
         >
           <div
-            class="sc-bdnxRM lhQKbR"
+            class="hTZTrA"
           >
-            Winner (feat. Justin Timberlake & T.I.)
+            Where Are Ü Now (with Justin Bieber) [feat. Justin Bieber]
           </div>
           <div
-            class="sc-iCoGMd iVNiph"
+            class="jmqOqk"
           >
             <span
               class="type"
@@ -148,35 +184,35 @@ exports[`display results  renders 1`] = `
               song
             </span>
              • 
-            Jamie Foxx
+            Jack Ü, Skrillex & Diplo
           </div>
         </div>
       </div>
     </div>
     <div
-      class="sc-hKFxyN gChbxn"
+      class="mLgqy"
     >
       <div
-        class="sc-eCApnc bRsgKj"
+        class="cPcMti"
       >
         <img
           alt="artwork"
-          src="https://is3-ssl.mzstatic.com/image/thumb/Music/v4/f8/70/d6/f870d6f9-0841-0052-9cd1-d89ae95ac0ad/source/100x100bb.jpg"
+          src="https://is2-ssl.mzstatic.com/image/thumb/Music115/v4/8f/8c/b0/8f8cb0f7-9b59-50b0-aba4-9939abccd41f/source/100x100bb.jpg"
         />
       </div>
       <div
-        class="sc-jSFjdj jDAnrT"
+        class="jwMMBf"
       >
         <div
-          class="sc-gKAaRy fItTJE"
+          class="fpdapt"
         >
           <div
-            class="sc-bdnxRM lhQKbR"
+            class="hTZTrA"
           >
-            Winner (feat. Justin Timberlake & T.I.)
+            Gas Pedal (feat. Justin Bieber & Iamsu!)
           </div>
           <div
-            class="sc-iCoGMd iVNiph"
+            class="jmqOqk"
           >
             <span
               class="type"
@@ -184,71 +220,35 @@ exports[`display results  renders 1`] = `
               song
             </span>
              • 
-            Jamie Foxx
+            Sage the Gemini
           </div>
         </div>
       </div>
     </div>
     <div
-      class="sc-hKFxyN gChbxn"
+      class="mLgqy"
     >
       <div
-        class="sc-eCApnc bRsgKj"
+        class="cPcMti"
       >
         <img
           alt="artwork"
-          src="https://is1-ssl.mzstatic.com/image/thumb/Video/v4/31/fe/e9/31fee9cd-f1e7-a6b2-5827-bd780c9e0b46/source/100x100bb.jpg"
+          src="https://is3-ssl.mzstatic.com/image/thumb/Music125/v4/39/e4/4f/39e44f2f-181e-4d13-87b5-275dff3c86d9/source/100x100bb.jpg"
         />
       </div>
       <div
-        class="sc-jSFjdj jDAnrT"
+        class="jwMMBf"
       >
         <div
-          class="sc-gKAaRy fItTJE"
+          class="fpdapt"
         >
           <div
-            class="sc-bdnxRM lhQKbR"
+            class="hTZTrA"
           >
-            Austin Powers In Goldmember
+            Let Me Love You (feat. Justin Bieber)
           </div>
           <div
-            class="sc-iCoGMd iVNiph"
-          >
-            <span
-              class="type"
-            >
-              feature-movie
-            </span>
-             • 
-            Jay Roach
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      class="sc-hKFxyN gChbxn"
-    >
-      <div
-        class="sc-eCApnc bRsgKj"
-      >
-        <img
-          alt="artwork"
-          src="https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/78/2b/8f/782b8fa1-0e66-b76d-83c9-80e6013e25f4/source/100x100bb.jpg"
-        />
-      </div>
-      <div
-        class="sc-jSFjdj jDAnrT"
-      >
-        <div
-          class="sc-gKAaRy fItTJE"
-        >
-          <div
-            class="sc-bdnxRM lhQKbR"
-          >
-            Justin
-          </div>
-          <div
-            class="sc-iCoGMd iVNiph"
+            class="jmqOqk"
           >
             <span
               class="type"
@@ -256,35 +256,35 @@ exports[`display results  renders 1`] = `
               song
             </span>
              • 
-            Korn
+            DJ Snake
           </div>
         </div>
       </div>
     </div>
     <div
-      class="sc-hKFxyN gChbxn"
+      class="mLgqy"
     >
       <div
-        class="sc-eCApnc bRsgKj"
+        class="cPcMti"
       >
         <img
           alt="artwork"
-          src="https://is3-ssl.mzstatic.com/image/thumb/Music125/v4/d6/f7/b0/d6f7b076-668e-a47a-8699-c31ea070a274/source/100x100bb.jpg"
+          src="https://is2-ssl.mzstatic.com/image/thumb/Music124/v4/54/8a/e0/548ae062-a8a9-5fcc-d809-43bca1d5d573/source/100x100bb.jpg"
         />
       </div>
       <div
-        class="sc-jSFjdj jDAnrT"
+        class="jwMMBf"
       >
         <div
-          class="sc-gKAaRy fItTJE"
+          class="fpdapt"
         >
           <div
-            class="sc-bdnxRM lhQKbR"
+            class="hTZTrA"
           >
-            Holy Grail (feat. Justin Timberlake)
+            Cold Water (feat. Justin Bieber & MØ)
           </div>
           <div
-            class="sc-iCoGMd iVNiph"
+            class="jmqOqk"
           >
             <span
               class="type"
@@ -292,35 +292,35 @@ exports[`display results  renders 1`] = `
               song
             </span>
              • 
-            JAY-Z
+            Major Lazer
           </div>
         </div>
       </div>
     </div>
     <div
-      class="sc-hKFxyN gChbxn"
+      class="mLgqy"
     >
       <div
-        class="sc-eCApnc bRsgKj"
+        class="cPcMti"
       >
         <img
           alt="artwork"
-          src="https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/57/b2/d7/57b2d7a7-3d6d-199e-872e-8527a8a86c9a/source/100x100bb.jpg"
+          src="https://is5-ssl.mzstatic.com/image/thumb/Music115/v4/4a/01/57/4a0157c8-de6a-e08b-3340-afb9a6e8d00f/source/100x100bb.jpg"
         />
       </div>
       <div
-        class="sc-jSFjdj jDAnrT"
+        class="jwMMBf"
       >
         <div
-          class="sc-gKAaRy fItTJE"
+          class="fpdapt"
         >
           <div
-            class="sc-bdnxRM lhQKbR"
+            class="hTZTrA"
           >
-            Carry Out (feat. Justin Timberlake)
+            Lolly (feat. Juicy J & Justin Bieber)
           </div>
           <div
-            class="sc-iCoGMd iVNiph"
+            class="jmqOqk"
           >
             <span
               class="type"
@@ -328,16 +328,16 @@ exports[`display results  renders 1`] = `
               song
             </span>
              • 
-            Timbaland
+            Maejor Ali
           </div>
         </div>
       </div>
     </div>
     <div
-      class="sc-hKFxyN gChbxn"
+      class="mLgqy"
     >
       <div
-        class="sc-eCApnc bRsgKj"
+        class="cPcMti"
       >
         <img
           alt="artwork"
@@ -345,18 +345,18 @@ exports[`display results  renders 1`] = `
         />
       </div>
       <div
-        class="sc-jSFjdj jDAnrT"
+        class="jwMMBf"
       >
         <div
-          class="sc-gKAaRy fItTJE"
+          class="fpdapt"
         >
           <div
-            class="sc-bdnxRM lhQKbR"
+            class="hTZTrA"
           >
             Despacito (feat. Justin Bieber)
           </div>
           <div
-            class="sc-iCoGMd iVNiph"
+            class="jmqOqk"
           >
             <span
               class="type"
@@ -370,7 +370,7 @@ exports[`display results  renders 1`] = `
       </div>
     </div>
     <div
-      class="sc-fujyAs bDcCHq"
+      class="jWihQU"
     >
       Scroll to see more
     </div>

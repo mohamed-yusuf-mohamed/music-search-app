@@ -2,19 +2,19 @@
 
 exports[`app renders 1`] = `
 <main
-  class="sc-jrsJWt ctNfEM"
+  class="dhiwMH"
   data-testid="app-container"
 >
   <div
-    class="sc-kEqXSa FWNNw"
+    class="fVkuyD"
     id="app-content"
   >
     <div
-      class="sc-pNWdM bMYNhs"
+      class="cyoGnI"
       id="app-header"
     >
       <div
-        class="MuiFormControl-root MuiTextField-root sc-bdnxRM dbawFk"
+        class="MuiFormControl-root MuiTextField-root dbawFk"
         data-testid="search-component"
       >
         <div
@@ -59,11 +59,11 @@ exports[`app renders 1`] = `
       </div>
     </div>
     <div
-      class="sc-dlnjwi ksErfN"
+      class="hFHqlx"
       data-testid="display-results-component"
     >
       <div
-        class="sc-hKFxyN iiWwtn"
+        class="efhAcW"
         id="display-results-content"
       />
     </div>

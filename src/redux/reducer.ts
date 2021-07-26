@@ -43,7 +43,9 @@ const reducer = (state: State = initialState, action: AnyAction): State => {
     case "RESET":
       return {
         ...state, 
-        data: {}
+        data: {},
+        page: 0,
+        error: false
       }
     case "FETCH":
       return {
