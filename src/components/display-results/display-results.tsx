@@ -6,6 +6,36 @@ import {Data} from "redux/reducer"
 import LinearProgress from '@material-ui/core/LinearProgress';
 import MESSAGES from "constants/messages"
 
+const DisplayContent = () => {
+  const results = useSelector(state => state.data)
+  const loading = useSelector(state => state.loading)
+  const data = useSelector(state => state.data)
+
+  return (
+    <Container data-testid="display-results-component">
+      <Content id="display-results-content">
+        {Object.values<Data>(results).map(({kind, trackName, artistName, artworkUrl100, trackId}: Data) => {
+          return (
+            <Row key={trackId}>
+              <ArtworkContainer>
+                <Artwork url={artworkUrl100} />
+              </ArtworkContainer>
+              <DetailsContainer>
+                <DetailsBox>
+                  <TrackName text={trackName} />
+                  <TypeAndName type={kind} name={artistName} />
+                </DetailsBox>
+              </DetailsContainer>
+            </Row>
+          )
+        })}
+        {loading && <LinearProgress />}
+        {!isEmpty(data) && !loading && <ScrollMessage />}
+      </Content>
+    </Container>
+  )
+}
+
 const Message = styled.div`
   margin-bottom: 5rem;
   background-color: whitesmoke;
@@ -91,35 +121,5 @@ const DetailsBox = styled.div`
   flex-direction: column;
   text-align: center;
 `
-
-const DisplayContent = () => {
-  const results = useSelector(state => state.data)
-  const loading = useSelector(state => state.loading)
-  const data = useSelector(state => state.data)
-
-  return (
-    <Container data-testid="display-results-component">
-      <Content id="display-results-content">
-        {Object.values<Data>(results).map(({kind, trackName, artistName, artworkUrl100, trackId}: Data) => {
-          return (
-            <Row key={trackId}>
-              <ArtworkContainer>
-                <Artwork url={artworkUrl100} />
-              </ArtworkContainer>
-              <DetailsContainer>
-                <DetailsBox>
-                  <TrackName text={trackName} />
-                  <TypeAndName type={kind} name={artistName} />
-                </DetailsBox>
-              </DetailsContainer>
-            </Row>
-          )
-        })}
-        {loading && <LinearProgress />}
-        {!isEmpty(data) && !loading && <ScrollMessage />}
-      </Content>
-    </Container>
-  )
-}
 
 export default DisplayContent
