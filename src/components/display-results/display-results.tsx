@@ -1,5 +1,5 @@
 import React from 'react';
-import { useSelector} from 'redux/hooks';
+import { useSelector, shallowEqual } from 'redux/hooks';
 import styled from "styled-components"
 import isEmpty from "lodash/isEmpty"
 import {Data} from "redux/reducer"
@@ -9,7 +9,7 @@ import MESSAGES from "constants/messages"
 const DisplayContent = () => {
   const results = useSelector(state => state.data)
   const loading = useSelector(state => state.loading)
-  const data = useSelector(state => state.data)
+  const data = useSelector(state => state.data, shallowEqual)
 
   return (
     <Container data-testid="display-results-component">
