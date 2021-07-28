@@ -48,7 +48,7 @@ const Search = () => {
       value={input}
       onChange={handleChange}
       InputProps={{
-        endAdornment: (
+        startAdornment: (
           <InputAdornment position="start">
             <SearchRounded onClick={handleIconClick}/>
           </InputAdornment>

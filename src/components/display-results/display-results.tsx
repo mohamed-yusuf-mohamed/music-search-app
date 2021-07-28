@@ -1,5 +1,6 @@
 import React from 'react';
-import { useSelector, shallowEqual } from 'redux/hooks';
+import { useSelector } from 'redux/hooks';
+import { shallowEqual } from 'react-redux';
 import styled from "styled-components"
 import isEmpty from "lodash/isEmpty"
 import {Data} from "redux/reducer"
