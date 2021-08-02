@@ -55,11 +55,11 @@ const ScrollMessage = () => {
     )
 }
 
-const Artwork = ({url}: {url: string}) => {
+const Artwork = ({url}: Component.Artwork) => {
   return <img src={url} alt="artwork"/>
 }
 
-const _TrackName = ({text, className}: {text: string, className?: string}) => {
+const _TrackName = ({text, className}: Component.TrackName) => {
   return (
     <div className={className}>
       {text}
@@ -72,7 +72,7 @@ const TrackName = styled(_TrackName)`
   margin-bottom: 1rem;
 `
 
-const _TypeAndName = ({type, name, className}: {type: string, name: string, className?: string}) => {
+const _TypeAndName = ({type, name, className}: Component.TypesAndName) => {
   return (
     <div className={className}>
       <span className="type">{type}</span> • {name}
@@ -82,7 +82,7 @@ const _TypeAndName = ({type, name, className}: {type: string, name: string, clas
 
 const TypeAndName = styled(_TypeAndName)`
   & .type {
-    text-transform: uppercase
+    text-transform: capitalize
   }
   font-size: 1.5rem;
 `
