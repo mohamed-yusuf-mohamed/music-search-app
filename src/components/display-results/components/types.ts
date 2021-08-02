@@ -1,4 +1,4 @@
-declare namespace Component {
+export namespace Component {
   export interface TypesAndName {
     type: string
     name: string 

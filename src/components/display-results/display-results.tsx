@@ -1,11 +1,10 @@
 import React from 'react';
 import { useSelector } from 'redux/hooks';
 import { shallowEqual } from 'react-redux';
-import styled from "styled-components"
 import isEmpty from "lodash/isEmpty"
 import {Data} from "redux/reducer"
 import LinearProgress from '@material-ui/core/LinearProgress';
-import MESSAGES from "constants/messages"
+import {Container, Content, Row, ArtworkContainer, Artwork, DetailsContainer, DetailsBox, TrackName, TypeAndName, ScrollMessage} from "./components"
 
 const DisplayContent = () => {
   const results = useSelector(state => state.data)
@@ -36,91 +35,5 @@ const DisplayContent = () => {
     </Container>
   )
 }
-
-const Message = styled.div`
-  margin-bottom: 5rem;
-  background-color: whitesmoke;
-  text-align: center;
-  font-size: 1.3rem;
-  padding: 2rem;
-  text-transform: uppercase;
-`
-
-const ScrollMessage = () => {
-  const error = useSelector(state => state.error)
-  return (
-      <Message>
-        {error ? MESSAGES["error"] : MESSAGES["scroll"]}
-      </Message>
-    )
-}
-
-const Artwork = ({url}: Component.Artwork) => {
-  return <img src={url} alt="artwork"/>
-}
-
-const _TrackName = ({text, className}: Component.TrackName) => {
-  return (
-    <div className={className}>
-      {text}
-    </div>
-  )
-}
-
-const TrackName = styled(_TrackName)`
-  font-size: 2rem;
-  margin-bottom: 1rem;
-`
-
-const _TypeAndName = ({type, name, className}: Component.TypesAndName) => {
-  return (
-    <div className={className}>
-      <span className="type">{type}</span> • {name}
-    </div>  
-  )
-}
-
-const TypeAndName = styled(_TypeAndName)`
-  & .type {
-    text-transform: capitalize
-  }
-  font-size: 1.5rem;
-`
-
-const Container = styled.div`
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  flex-direction: row;
-  flex: 1;
-`
-
-const Content = styled.div`
-  padding: 2rem 5rem 2rem 5rem;
-  flex: 1;
-  `
-
-const Row = styled.div`
-  display: flex;
-  &:hover {
-    background-color: whitesmoke;
-  }
-`
-
-const ArtworkContainer = styled.div`
-  flex: 0.15; 
-  padding: 1rem;
-`
-
-const DetailsContainer = styled.div`
-  flex: 0.85;
-  padding: 1rem;
-`
-
-const DetailsBox = styled.div`
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-`
 
 export default DisplayContent
