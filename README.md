@@ -24,3 +24,4 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 - 'Go to collection' button beneath album art
 - Load more, concat arrays instead of objects, see if it appends correctly
 - App walkthrough using tooltips: be fun and witty
+- Redux pattern: use containers
